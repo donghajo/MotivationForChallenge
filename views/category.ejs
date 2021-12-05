@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="text-center"> 
+        <h2>안녕하세요 <%=nickname%>님</h2>
         <% if(session){%>
             <form class="form-inline" action='/signout' method='get'>
                 <button class="btn btn-outline-dark" type='submit'>로그아웃</button>
