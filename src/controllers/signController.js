@@ -31,6 +31,7 @@ exports.signIn = async(req, res) =>{
     try{
         const user = await signService.signIn([id, pw]);
         req.session.user_id = user[0].id;
+        req.session.nickname = user[0].nickname;
         req.session.save(function(){
             res.redirect('/');
         })
