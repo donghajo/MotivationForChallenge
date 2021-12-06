@@ -17,11 +17,11 @@ exports.signUp = async(req, res) =>{
             res.send('<script type="text/javascript">alert("비밀번호를 확인해주세요."); location.href="/signup";</script>');
         }else{
             signService.signUp([id, pw, name, nickname, email, interest]);
-            res.redirect('/signin');
         }
-
+        return res.redirect('/signin');
     }catch(err){
         res.send('<script type="text/javascript">alert("이미 사용중인 아이디 입니다."); document.location.href="/signup";</script>')
+        return res.status(500).json(err)
     }
 }
 
