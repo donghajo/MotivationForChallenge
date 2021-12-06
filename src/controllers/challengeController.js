@@ -54,7 +54,6 @@ exports.getDetail = async(req, res) => {
 //챌린지 생성
 exports.createChallenge = async(req, res) => {
     const session = req.session.user_id;
-    const category_id = req.params.category_id;
     const {name, start_date, end_date, content, proof, type, image} = req.body;
     const participation_date = new Date();
     try{
