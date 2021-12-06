@@ -21,7 +21,7 @@ exports.signUp = async(req, res) =>{
         }
 
     }catch(err){
-        res.send('<script type="text/javascript">alert("이미 사용중인 아이디 입니다."); document.location.href="/signUp";</script>')
+        res.send('<script type="text/javascript">alert("이미 사용중인 아이디 입니다."); document.location.href="/signup";</script>')
     }
 }
 
