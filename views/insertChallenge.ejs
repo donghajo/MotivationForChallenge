@@ -7,6 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action='/create' method='post'>
+        <div >
+            <div>
+                챌린지 이름  <input type="text" name='name'>
+            </div>
+            <div>
+                시작 날짜  <input type="text" name='start_date'>
+            </div>
+            <div>
+                종료 날짜  <input type="text" name='end_date'>
+            </div>
+            <div>
+                클래스 내용  <input type="text" name='content'>
+            </div>
+            <div>
+                인증 방법  <input type="text" name='proof'>
+            </div>
+            <div>
+                INTEREST  <select type="text" name='type'>
+                    <option value="1">운동</option>
+                    <option value="2">요리</option>
+                    <option value="3">음악</option>
+                    <option value="4">기타</option>
+                </select>
+            </div>
+            <div>
+                파일 첨부  <input type="file" name='image'>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">개설</button>
+            
+        </div>
 </body>
 </html>

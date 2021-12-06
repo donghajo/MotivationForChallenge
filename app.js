@@ -8,6 +8,7 @@ const FileStore = require('session-file-store')(session);
 
 var indexRouter = require('./src/routes/indexRouter');
 var signRouter = require('./src/routes/signRouter');
+var challengeRouter = require('./src/routes/challengeRouter');
 // var usersRouter = require('./routes/users');
 
 
@@ -29,9 +30,9 @@ app.use(session({
   store: new FileStore()
 }))
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
 app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+app.use('/', challengeRouter);
 app.use('/', signRouter);
 
 // catch 404 and forward to error handler
