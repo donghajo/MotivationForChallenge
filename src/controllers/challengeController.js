@@ -1,7 +1,7 @@
 const challengeService = require('../services/challengeService');
 
 
-
+//리스트 조회
 exports.getList = async(req, res)=> {
     const category_id = req.params.category_id;
     const session = req.session.user_id;
@@ -19,6 +19,7 @@ exports.getList = async(req, res)=> {
     }
 }
 
+//챌린지 개설 페이지
 exports.getInsertChallenge = async(req, res) => {
     const category_id = req.params.category_id;
     const session = req.session.user_id;
@@ -34,6 +35,7 @@ exports.getInsertChallenge = async(req, res) => {
     }
 }
 
+//글 상세 조회
 exports.getDetail = async(req, res) => {
     const session = req.session.user_id;
     const challenge = req.params;
@@ -49,7 +51,7 @@ exports.getDetail = async(req, res) => {
 }
 
 
-//insert
+//챌린지 생성
 exports.createChallenge = async(req, res) => {
     const session = req.session.user_id;
     const category_id = req.params.category_id;

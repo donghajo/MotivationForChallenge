@@ -1,7 +1,7 @@
 const challengeQuery = require('../queries/challengeQuery');
 const database = require('../../database/database');
 
-
+//리스트 조회
 exports.getList = async(req) => {
     try{
         const rows = await database.query(challengeQuery.getList, req);
@@ -11,7 +11,7 @@ exports.getList = async(req) => {
     }
 }
 
-
+//챌린지 개설
 exports.createChallenge = async(req) => {
     try{
         await database.query(challengeQuery.createChallenge, req);
@@ -21,16 +21,17 @@ exports.createChallenge = async(req) => {
     }
 }
 
+//생성시간으로 챌린지 id값 받아오기
 exports.getChallengeId = async(req) => {
     try{
         const id = await database.query(challengeQuery.getChallengeId, req);
-        console.log(id[0]);
         return id[0];
     }catch(err){
         return Error(err);
     }
 }
 
+//챌린지 참여
 exports.participate = async(req) => {
     try{
         await database.query(challengeQuery.participate, req);
@@ -41,7 +42,7 @@ exports.participate = async(req) => {
     }
 }
 
-
+//id값으로 챌린지 받아오기
 exports.getChallenge = async(req) => {
     try{
         const challenge = await database.query(challengeQuery.getChallenge, req);
