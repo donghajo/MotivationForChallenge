@@ -1,0 +1,1 @@
+exports.getList = 'select * from challenge where type = ?';
