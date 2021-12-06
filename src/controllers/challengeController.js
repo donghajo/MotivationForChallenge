@@ -38,7 +38,7 @@ exports.getDetail = async(req, res) => {
     const session = req.session.user_id;
     const challenge = req.params;
     try{
-        const detail = await challengeService.getChallenge([challenge]);
+        const detail = await challengeService.getChallenge([challenge.id]);
         return res.render('detailChallenge',{
             session:session,
             detail:detail
