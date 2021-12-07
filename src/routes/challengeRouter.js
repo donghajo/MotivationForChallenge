@@ -11,5 +11,8 @@ router.post('/create', challengeController.createChallenge);
 
 
 
+//참여
+
+
 
 module.exports = router;
