@@ -46,6 +46,7 @@ exports.participate = async(req) => {
 exports.getChallenge = async(req) => {
     try{
         const challenge = await database.query(challengeQuery.getChallenge, req);
+        await database.query(challengeQuery.increaseChallenger, req);
         return challenge[0];
     }catch(err){
         return Error(err);
