@@ -2,10 +2,18 @@ const signService = require('../services/signService');
 
 //페이지 불러오기
 exports.getSignIn = async(req, res) =>{
-    return res.render('signin');
+    const session = req.session.user_id;
+    return res.render('index', {
+        session:session,
+        pages : 'signin'
+    });
 }
 exports.getSignUp = async(req, res) =>{
-    return res.render('signup');
+    const session = req.session.user_id;
+    return res.render('index', {
+        session:session,
+        pages : 'signup'
+    });
 }
 
 

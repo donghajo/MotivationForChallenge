@@ -3,9 +3,10 @@ exports.getMain = async(req, res) =>{
     try{
         const session = req.session.user_id;
         const nickname = req.session.nickname;
-        return res.render('category',{
+        return res.render('index',{
             session:session,
-            nickname:nickname
+            nickname:nickname,
+            pages : 'category'
         });
     }catch(err){
         return res.status(500).json(err);
