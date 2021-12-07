@@ -10,20 +10,32 @@
 </head>
 <body>
     <div class="text-center"> 
-        <h2><%=session%></h2>
-        <% if(session){%>
-            <form class="form-inline" action='/signout' method='get'>
-                <button class="btn btn-outline-dark" type='submit'>로그아웃</button>
-            </form>    
-        <%}else{%>
-            <button type="button" class="btn btn-outline-dark" onclick="location.href='/signin'">로그인</button>
-            <%}%>
-    
-            <div>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='/list/1'">운동</button>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='/list/2'">요리</button>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='/list/3'">음악</button>
-                <button type="button" class="btn btn-outline-dark" onclick="location.href='/list/4'">기타</button>
+            <nav class="navbar navbar-expand-sm justify-content-end bg-light fixed-top" > 
+                <ul  class="navbar-nav " > 
+                  </li> 
+                  <li class="nav-item justify-content-end"> 
+                    <% if(session){%>
+                        <form class="form-inline" action='/signout' method='get'>
+                            <button class="btn btn-outline-dark" type='submit'>로그아웃</button>
+                        </form>    
+                    <%}else{%>
+                        <button type="button" class="btn btn-outline-dark mx-3" onclick="location.href='/signin'">로그인</button>
+                        <%}%> 
+                  </li>                   
+              <li  class="navbar-text active justify-content-end"> 
+                <% if(session){%>
+                <%=session%> 
+                <li>
+                    <img src="https://e7.pngegg.com/pngimages/612/745/png-clipart-thin-line-user-icon-icons-logos-emojis-users.png" alt="Logo" style="width:40px;">  
+                </li> 
+                  <%}%>
+                </ul> 
+              </nav> 
+            <div class="" style="margin-top: 8%;">
+                <button type="button" class="btn btn-outline-dark mx-5 my-5" onclick="location.href='/list/1'"><img src="https://item.kakaocdn.net/do/6862fba2295ce6299936c3a12ef7a9fcf43ad912ad8dd55b04db6a64cddaf76d" height ="200" width="200"><p>운동</p></button>
+                <button type="button" class="btn btn-outline-dark mx-5 my-5" onclick="location.href='/list/2'"><img src="https://i.pinimg.com/originals/d9/44/14/d944141d350c211238576f3b9b944d37.gif" height="200" width="200"><p>요리</p></button><br>
+                <button type="button" class="btn btn-outline-dark mx-5 my-5" onclick="location.href='/list/3'"><img src="https://i.pinimg.com/originals/27/bf/8f/27bf8f6b33a219aa2db9c069b49195c5.gif" height="200" width="200"><p>음악</p></button>
+                <button type="button" class="btn btn-outline-dark mx-5 my-5" onclick="location.href='/list/4'"><img src="https://i.pinimg.com/originals/94/7e/26/947e265b4da2f6c2f189bf16331a671b.gif" height="200" width="200"><p>기타</p></button>
             </div>
         </div>
 

@@ -53,12 +53,14 @@ exports.createChallenge = async(req, res) => {
     const {name, start_date, end_date, content, proof, type, image} = req.body;
     const participation_date = new Date();
     try{
+        if(!session){
+            return res.send('<script type="text/javascript">alert("회원만 생성가능합니다."); location.href="/signin";</script>');
+        }
         await challengeService.createChallenge([type, name, session, start_date, end_date, content, proof, participation_date, image]);
         const challenge_name = await challengeService.getChallengeId([participation_date]);
         await challengeService.participate([challenge_name[0].challenge_uid, session, participation_date]);
         return res.redirect('/list/'+type);
     }catch(err){
-        console.log(err);
         return res.status(500).json(err);
     }
 }
