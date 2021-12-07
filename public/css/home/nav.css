@@ -1,0 +1,16 @@
+.nav-pills {
+	width: 100%;
+ 	display: inline-block;
+}
+
+.left-tab {
+	float: left;
+}
+
+.right-tab {
+	float: right;
+}
+
+.nav {
+    justify-content: space-between;
+}
