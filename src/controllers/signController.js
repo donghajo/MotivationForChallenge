@@ -32,9 +32,8 @@ exports.signIn = async(req, res) =>{
         const user = await signService.signIn([id, pw]);
         req.session.user_id = user[0].id;
         req.session.nickname = user[0].nickname;
-        req.session.save(function(){
-            res.redirect('/');
-        })
+
+        return res.redirect('/');
     }catch(err){
         res.send('<script type="text/javascript">alert("아이디 또는 비밀번호를 확인해주세요"); location.href="/signin";</script>');
     }

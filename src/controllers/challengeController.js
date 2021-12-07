@@ -41,6 +41,7 @@ exports.getDetail = async(req, res) => {
     const challenge = req.params;
     try{
         const detail = await challengeService.getChallenge([challenge.id]);
+        console.log(detail[0].image);
         return res.render('detailChallenge',{
             session:session,
             detail:detail
