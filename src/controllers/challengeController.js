@@ -8,11 +8,12 @@ exports.getList = async(req, res)=> {
     const nickname = req.session.nickname;
     try{
         const rows = await challengeService.getList([category_id]);
-        return res.render('listChallenge',{
+        return res.render('index',{
             session:session,
             nickname:nickname,
             rows:rows,
-            category_id:category_id
+            category_id:category_id,
+            pages : 'listChallenge'
         })
     }catch(err){
         return res.status(500).json(err);
@@ -25,10 +26,11 @@ exports.getInsertChallenge = async(req, res) => {
     const session = req.session.user_id;
     const nickname = req.session.nickname;
     try{
-        return res.render('insertChallenge', {
+        return res.render('index', {
            session:session,
            nickname:nickname,
-           category_id:category_id 
+           category_id:category_id,
+           pages : 'insertChallenge' 
         });
     }catch(err){
         return res.status(500).json(err);
