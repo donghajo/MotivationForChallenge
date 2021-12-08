@@ -7,10 +7,11 @@ exports.getList = async(req, res)=> {
     const session = req.session.user_uid;
     try{
         const rows = await challengeService.getList([challenge_type]);
-        return res.render('listChallenge',{
+        return res.render('index',{
             session:session,
             rows:rows,
-            challenge_type:challenge_type
+            challenge_type:challenge_type,
+            pages: 'listChallenge'
         })
     }catch(err){
         return res.status(500).json(err);
@@ -22,9 +23,10 @@ exports.getInsertChallenge = async(req, res) => {
     const challenge_type = req.params.challenge_type;
     const session = req.session.user_id;
     try{
-        return res.render('insertChallenge', {
+        return res.render('index', {
            session:session,
-           challenge_type:challenge_type 
+           challenge_type:challenge_type,
+           pages : 'insertChallenge' 
         });
     }catch(err){
         return res.status(500).json(err);

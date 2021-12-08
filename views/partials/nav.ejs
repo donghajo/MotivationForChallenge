@@ -1,35 +1,35 @@
 <nav class="navbar navbar-expand-sm justify-content-end bg-light fixed-top" > 
 
-    <ul  class="navbar-nav " > 
-        
+  <ul  class="navbar-nav " > 
+      
+
+    </li> 
+
+    <li class="nav-item justify-content-end"> 
+
+      <% if(session){%>
+          <form class="form-inline" action='/signout' method='get'>
+              <button class="btn btn-outline-dark" type='submit'>로그아웃</button>
+          </form>    
+      <%}else{%>
+          <button type="button" class="btn btn-outline-dark mx-3" onclick="location.href='/signin'">로그인</button>
+          <%}%>
+
+    </li> 
+
   
-      </li> 
-  
-      <li class="nav-item justify-content-end"> 
-  
-        <% if(session){%>
-            <form class="form-inline" action='/signout' method='get'>
-                <button class="btn btn-outline-dark" type='submit'>로그아웃</button>
-            </form>    
-        <%}else{%>
-            <button type="button" class="btn btn-outline-dark mx-3" onclick="location.href='/signin'">로그인</button>
-            <%}%>
-  
-      </li> 
 
     
+<li  class="navbar-text active justify-content-end"> 
+  <% if(session){%>
+  안녕하세요 <%=nickname%>님
 
-      
-  <li  class="navbar-text active justify-content-end"> 
-    <% if(session){%>
-    안녕하세요 <%=nickname%>님
-  
-  
-    <li>
-        <img src="https://e7.pngegg.com/pngimages/612/745/png-clipart-thin-line-user-icon-icons-logos-emojis-users.png" alt="Logo" style="width:40px;"> 
-  
-      </li> 
-      <%}%>
-    </ul> 
-  
-  </nav>
+
+  <li>
+      <img src="https://e7.pngegg.com/pngimages/612/745/png-clipart-thin-line-user-icon-icons-logos-emojis-users.png" alt="Logo" style="width:40px;"> 
+
+    </li> 
+    <%}%>
+  </ul> 
+
+</nav>
