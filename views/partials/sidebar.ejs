@@ -1,0 +1,114 @@
+<style>
+    @font-face {
+    font-family: 'SB OTF M';
+    font-weight: 100;
+    src: url("../font/SB\ OTF\ M.otf") format(truetype);
+  }
+  </style>
+  
+  
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/" style="font-weight: 900;", style="font-family: SB OTF M">
+      <img src="./images/logo.png" width ="30" heigh="30" class="d-inline-block align-top" alt="">
+      MFC</a>
+  
+    
+  
+    <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 80%;" >
+      
+      <% if(session){%>
+        <ul class="navbar-nav ml-auto">
+          <form class="form-inline" action='/signout' method='get'>
+            <button class="btn btn-outline-dark" type='submit'>로그아웃</button>
+        </form>
+        <li  class="nav-item" style="margin-top: 8px;"> <%=session%>님</li>
+        
+  
+        </ul>
+        <a href='/mypage/myInfo/<%=session%>'>
+          <img src="https://e7.pngegg.com/pngimages/612/745/png-clipart-thin-line-user-icon-icons-logos-emojis-users.png"  alt="Logo" style="width:40px;"> 
+        </a>
+        
+    <%}else{%>
+        <button type="button" class="btn btn-outline-dark mx-3" onclick="location.href='/signin'">로그인</button>
+        <%}%>
+  
+        
+    </div>
+  </nav>
+<div class="text-center"> 
+    <style>
+        /* 사이드바 래퍼 스타일 */
+        
+        #page-wrapper {
+          padding-left: 250px;
+        }
+        
+        #sidebar-wrapper {
+          position: fixed;
+          width: 250px;
+          height: 100%;
+          margin-left: -250px;
+          background: #000;
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+        
+        #page-content-wrapper {
+          width: 100%;
+          padding: 20px;
+        }
+        /* 사이드바 스타일 */
+        
+        .sidebar-nav {
+          width: 250px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        
+        .sidebar-nav li {
+          text-indent: 1.5em;
+          line-height: 2.8em;
+        }
+        
+        .sidebar-nav li a {
+          display: block;
+          text-decoration: none;
+          color: #999;
+        }
+        
+        .sidebar-nav li a:hover {
+          color: #fff;
+          background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .sidebar-nav > .sidebar-brand {
+          font-size: 1.3em;
+          line-height: 3em;
+        }
+      
+      </style>
+      
+      <div id="page-wrapper">
+        <!-- 사이드바 -->
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+              <p style="color: white;">Mypage</p>
+            </li>
+            <li><a href="/mypage/updateMyInfo/<%=session%>">내정보</a></li>
+            <li><a href="/mypage/challenge/<%=session%>">챌린지 정보</a></li>
+            <li><a href="/mypage/post/<%=session%>">게시글</a></li>
+        
+          </ul>
+        </div>
+        <!-- /사이드바 -->
+      
+       
+      </div>
+    
+
+          
+    </div>
