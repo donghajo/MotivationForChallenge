@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action='/challenge/<%=challenge_uid%>/insert' method='post'>
+        <div style="margin-top: 8%;">
+            <div class="form">
+                <div>
+                    파일 첨부  <input type="file" name='image'>
+                </div>
+                <div>
+                    내용  <input type="text" name='content'>
+                </div>
+            <button type="submit" class="btn btn-outline-dark">등록</button>
+            
+        </div>
+    </div>
 </body>
 </html>
