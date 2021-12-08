@@ -66,3 +66,21 @@ exports.createChallenge = async(req, res) => {
         return res.status(500).json(err);
     }
 }
+
+
+exports.participate = async(req, res) => {
+    const session = req.session.user_uid;
+    const challenge_uid = req.params.challenge_uid;
+    const participation_date = new Date();
+    try{
+        const exis = await challengeService.existence([challenge_uid,session]);
+        if(!exis[0]){
+            await challengeService.participate([challenge_uid, session, participation_date]);
+            return res.redirect('/challenge/'+challenge_uid);
+        }else{
+            return res.send('<script type="text/javascript">alert("이미 참여중이거나 회원이 아닙니다."); location.href="/";</script>');
+        }
+    }catch(err){
+        return res.status(500).json(err);
+    }
+}

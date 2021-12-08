@@ -35,6 +35,7 @@ exports.getChallengeId = async(req) => {
 exports.participate = async(req) => {
     try{
         await database.query(challengeQuery.participate, req);
+        await database.query(challengeQuery.increaseChallenger, req);
         return
     }catch(err){
         console.log(err);
@@ -46,8 +47,17 @@ exports.participate = async(req) => {
 exports.getChallenge = async(req) => {
     try{
         const challenge = await database.query(challengeQuery.getChallenge, req);
-        await database.query(challengeQuery.increaseChallenger, req);
         return challenge[0];
+    }catch(err){
+        return Error(err);
+    }
+}
+
+
+exports.existence = async(req) => {
+    try{
+        const exis = await database.query(challengeQuery.existence, req);
+        return exis[0];
     }catch(err){
         return Error(err);
     }

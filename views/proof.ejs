@@ -8,5 +8,54 @@
 </head>
 <body>
     
+    <div class="px-4 py-5 my-5 text-center">
+        <button type="button" class="btn btn-outline-dark" onclick="location.href='/challenge/<%=challenge_uid%>'">상세</button>
+        <button type="button" class="btn btn-outline-dark" onclick="location.href='/challenge/<%=challenge_uid%>/proof'">인증</button>
+        <button type="button" class="btn btn-outline-dark" onclick="location.href='/challenge/<%=challenge_uid%>/board'">게시판</button>
+    </div>
+    <div>
+        <div>
+            나의 인증 퍼센트
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-dark" onclick="location.href='/challenge/<%=challenge_uid%>/proof/insert'">인증</button>
+        </div>
+    </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <div class="col-lg-10 mx-auto">
+            <table class="table">
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">사진</th>
+                  <th scope="col">내용</th>
+                  <th scope="col">작성자</th>
+                  <th scope="col">작성일자</th>
+                <% if(session==challenge){ %>
+                    <th scope="col"></th>
+                <% } %>
+
+                </tr>
+                <%
+                for(var i = 0; i<rows.length; i++)
+                {
+                %>
+                <tr>
+                  <td><%=i+1%></td>
+                  <td><%=rows[i].proof_image%></td>
+                  <td><%=rows[i].proof_content%></td>
+                  <td><%=rows[i].user_uid%></td>
+                  <td><%=rows[i].proof_create_date%></td>
+                  <% if(session==challenge&&rows[i].proof_permit=='x'){%>
+                    <td><button type="button"  onclick="location.href='/challenge/<%=challenge_uid%>/<%=rows[i].user_uid%>/proof/permit'">인증</button></td>
+                <%}%>
+                </td>
+                </tr>
+                <%
+                }
+                %>
+          
+              </table>
+        </div>
+    </div>
 </body>
 </html>

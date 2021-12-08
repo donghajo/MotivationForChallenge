@@ -12,7 +12,7 @@ router.post('/create', challengeController.createChallenge);
 
 
 //참여
-
+router.get('/challenge/participate/:challenge_uid', challengeController.participate);
 
 
 module.exports = router;
