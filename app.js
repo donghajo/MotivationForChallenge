@@ -9,6 +9,8 @@ const session = require('express-session');
 var indexRouter = require('./src/routes/indexRouter');
 var signRouter = require('./src/routes/signRouter');
 var challengeRouter = require('./src/routes/challengeRouter');
+var proofRouter = require('./src/routes/proofRouter');
+var boardRouter = require('./src/routes/boardRouter');
 // var usersRouter = require('./routes/users');
 
 
@@ -33,6 +35,8 @@ app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/', challengeRouter);
 app.use('/', signRouter);
+app.use('/challenge', proofRouter);
+app.use('/challenge', boardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
