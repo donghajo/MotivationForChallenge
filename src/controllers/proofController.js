@@ -37,10 +37,9 @@ exports.getInsertProof = async(req, res) => {
 exports.insertProof = async(req, res) => {
     const challenge_uid = req.params.challenge_uid;
     const session = req.session.user_uid;
-    const {image, content} = req.body;
+    const {content} = req.body;
+    const image =`${req.file.filename}`;
     const now = new Date();
-
-    console.log("challenge_uid");
     try{
         if(!session){
             return res.send('<script type="text/javascript">alert("로그인을 해주세요"); location.href="/signin";</script>');
@@ -48,7 +47,6 @@ exports.insertProof = async(req, res) => {
         const exis = await challengeService.existence([challenge_uid,session]);
         if(!exis[0]){
             await proofService.insertProof([content,now,image,challenge_uid,session]);
-            console.log("pass");
             return res.redirect('/challenge/'+challenge_uid+'/proof');
         }else{
             return res.send('<script type="text/javascript">alert("해당 챌린지에 참여한 회원만 등록 가능합니다."); location.href="/";</script>');

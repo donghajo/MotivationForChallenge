@@ -39,6 +39,7 @@ exports.getDetail = async(req, res) => {
     const challenge = req.params.challenge_uid;
     try{
         const detail = await challengeService.getChallenge([challenge]);
+        console.log(detail[0].challenge_image);
         return res.render('detailChallenge',{
             session:session,
             detail:detail
@@ -52,7 +53,8 @@ exports.getDetail = async(req, res) => {
 //챌린지 생성
 exports.createChallenge = async(req, res) => {
     const session = req.session.user_uid;
-    const {name, start_date, end_date, content, proof, type, image} = req.body;
+    const {name, start_date, end_date, content, proof, type} = req.body;
+    const image =`${req.file.filename}`;
     const participation_date = new Date();
     try{
         if(!session){
