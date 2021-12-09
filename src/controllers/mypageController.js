@@ -10,7 +10,7 @@ exports.myInfoPage = async (req, res) => {
         return res.render('index1', {
             session:session, 
             user_info:user_info,
-            pages : 'mypage'
+            pages : 'myInfo'
         })
     }
 
@@ -30,7 +30,7 @@ exports.updateMyInfoPage = async (req, res) => {
         return res.render('index1', {
             session:session, 
             user_info:user_info,
-            pages : 'myinfo'
+            pages : 'updateUser'
         })
     }
 
@@ -72,7 +72,7 @@ exports.postPage = async (req, res) => {
         return res.render('index1', {
             session:session, 
             post_info:post_info,
-            pages : 'board'
+            pages : 'post'
         })
     }
 

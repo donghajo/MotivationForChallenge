@@ -1,52 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir='ltr'>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!---<title> Responsive Our Team Section | CodingLab </title>---->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+    
 
 </head>
-<body>
-    <div class="text-center"> 
+   
+<div class="container my-4">
 
-      <div class="card" style="width: 18rem; margin-left: 10%; margin-top: 7%">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        
-      </div>
+  <hr class="mt-5">
 
-      <div class="text-center"> 
+  <p style="font-size: 30px;">Motivation For Challenge</p>
 
-        <div class="card" style="width: 18rem; margin-left: 10%; margin-top: 7%">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+
+  <a class="btn btn-dark me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/" role="button">MyPage</a>
+  <a class="btn btn-primary me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/getting-started/" role="button">Board</a>
+  
+
+  <hr class="mb-5"/>
+
+  <!--Carousel Wrapper-->
+  <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+    <!--Controls-->
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
           </div>
-          
-        </div>
-        
 
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--/.First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--/.Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 clearfix d-none d-md-block">
+            <div class="card mb-2">
+              <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                   alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <a class="btn btn-primary">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--/.Third slide-->
+
+    </div>
+    <!--/.Slides-->
+
+  </div>
+  <!--/.Carousel Wrapper-->
+
+
+</div>  
+
+<hr class="mt-5">
+<p style="font-size: 30px;">Challenge Category</p>
+
+
+<hr class="mt-5">
+
+          <div class="">
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/1'"><img src="https://item.kakaocdn.net/do/6862fba2295ce6299936c3a12ef7a9fcf43ad912ad8dd55b04db6a64cddaf76d" height ="100" width="150"><p>운동</p></button>
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/2'"><img src="https://i.pinimg.com/originals/d9/44/14/d944141d350c211238576f3b9b944d37.gif" height="100" width="150"><p>요리</p></button>
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/3'"><img src="https://i.pinimg.com/originals/27/bf/8f/27bf8f6b33a219aa2db9c069b49195c5.gif" height="100" width="150"><p>음악</p></button>
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/4'"><img src="https://i.pinimg.com/originals/94/7e/26/947e265b4da2f6c2f189bf16331a671b.gif" height="100" width="150"><p>기타</p></button><br>
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/5'"><img src="https://t1.daumcdn.net/cfile/tistory/99EBD1485B0DFBE113" height="100" width="150"><p>외국어</p></button>
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/6'"><img src="https://info.dk311.jp/wp-content/uploads/2018/04/13.gif" height="100" width="150"><p>생활습관</p></button>
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/7'"><img src="https://i.pinimg.com/originals/6f/39/f0/6f39f0bbe37c1faf827bc78b221096c9.gif" height="100" width="150"><p>돈관리</p></button>
+            <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/8'"><img src="https://i.pinimg.com/originals/66/a8/00/66a800df5417f9739235a98127de4dc9.gif" height="100" width="150"><p>공부</p></button>
+        </div>
+        <hr class="mb-5"/>
+
+        </div>
+      </body>
+      </html>
+      
             
 
-            <div class="" style="margin-top: 10%;">
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/1'"><img src="https://item.kakaocdn.net/do/6862fba2295ce6299936c3a12ef7a9fcf43ad912ad8dd55b04db6a64cddaf76d" height ="100" width="150"><p>운동</p></button>
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/2'"><img src="https://i.pinimg.com/originals/d9/44/14/d944141d350c211238576f3b9b944d37.gif" height="100" width="150"><p>요리</p></button>
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/3'"><img src="https://i.pinimg.com/originals/27/bf/8f/27bf8f6b33a219aa2db9c069b49195c5.gif" height="100" width="150"><p>음악</p></button>
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/4'"><img src="https://i.pinimg.com/originals/94/7e/26/947e265b4da2f6c2f189bf16331a671b.gif" height="100" width="150"><p>기타</p></button><br>
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/5'"><img src="https://i.pinimg.com/originals/27/bf/8f/27bf8f6b33a219aa2db9c069b49195c5.gif" height="100" width="150"><p>음악</p></button>
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/6'"><img src="https://i.pinimg.com/originals/94/7e/26/947e265b4da2f6c2f189bf16331a671b.gif" height="100" width="150"><p>기타</p></button>
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/7'"><img src="https://i.pinimg.com/originals/27/bf/8f/27bf8f6b33a219aa2db9c069b49195c5.gif" height="100" width="150"><p>음악</p></button>
-                <button type="button" class="btn btn-outline-dark mx-3 my-3" onclick="location.href='/list/8'"><img src="https://i.pinimg.com/originals/94/7e/26/947e265b4da2f6c2f189bf16331a671b.gif" height="100" width="150"><p>기타</p></button>
-            </div>
-        </div>
+            
+        
 
    
 
