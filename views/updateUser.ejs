@@ -10,8 +10,9 @@
 
 </head>
 <body>
-    <p>회원 정보 수정</p>
+    
     <form class="row g-3" style="margin-left:15%; padding: 100px;">
+        <p>회원 정보 수정</p>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail4">
@@ -20,39 +21,27 @@
           <label for="inputPassword4" class="form-label">Password</label>
           <input type="password" class="form-control" id="inputPassword4">
         </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
         <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
+            <label for="inputEmail4" class="form-label">Name</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">interest</label>
           <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
+            <option selected>선택</option>
+            <option>운동</option>
+            <option>요리</option>
+            <option>음악</option>
+            <option>기타</option>
+            <option>외국어</option>
+            <option>생활습관</option>
+            <option>돈관리</option>
+            <option>공부</option>
+
           </select>
         </div>
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
-        </div>
         <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-primary">Update</button>
         </div>
       </form>
    
