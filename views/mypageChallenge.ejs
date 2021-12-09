@@ -7,6 +7,55 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="px-4 py-5 my-5 text-center">
+        <div class="col-lg-10 mx-auto">
+            <table class="table">
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">챌린지 명</th>
+                  <th scope="col">진행 여부</th>
+                </tr>
+                <%
+                for(var i = 0; i<pc_info.length; i++)
+                {
+                %>
+                <tr>
+                  <td><%=i+1%></td>
+                  <td><a href="/challenge/<%=pc_info[i].challenge_uid%>"><%=pc_info[i].challenge_title%></a></td>
+                  <td><%=pc_info[i].challenge_state%></td>
+                </td>
+                </tr>
+                <%
+                }
+                %>
+          
+              </table>
+        </div>
+    </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <div class="col-lg-10 mx-auto">
+            <table class="table">
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">챌린지 명</th>
+                  <th scope="col">진행 여부</th>
+                </tr>
+                <%
+                for(var i = 0; i<cc_info.length; i++)
+                {
+                %>
+                <tr>
+                  <td><%=i+1%></td>
+                  <td><a href="/challenge/<%=cc_info[i].challenge_uid%>"><%=cc_info[i].challenge_title%></a></td>
+                  <td><%=cc_info[i].challenge_state%></td>
+                </td>
+                </tr>
+                <%
+                }
+                %>
+          
+              </table>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 const mypageService = require('../services/mypageService');
+const challengeService = require('../services/challengeService');
 
 exports.myInfoPage = async (req, res) => {
 
