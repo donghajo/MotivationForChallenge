@@ -20,7 +20,8 @@ exports.addPost = async(post_title, post_content, post_image, post_create_date, 
     }
 }
 
-exports.postDetail = async(challenge_uid, post_uid) => {
+exports.
+postDetail = async(challenge_uid, post_uid) => {
     try{
         let detail = await db.query(boardQuery.postDetail, [challenge_uid, post_uid]);
         return detail[0]
@@ -31,9 +32,18 @@ exports.postDetail = async(challenge_uid, post_uid) => {
 
 exports.addComment = async(comment_content, comment_create_date, post_uid, session) => {
     try{
-        let addComment = await db.query(boardQuery.addPost, [comment_content, comment_create_date, post_uid, session]);
+        let addComment = await db.query(boardQuery.addComment, [comment_content, comment_create_date, post_uid, session]);
         return addComment[0]
     }catch(err){
         return Error(err)
+    }
+}
+
+exports.getComment = async(req)=>{
+    try{
+        const comments = await db.query(boardQuery.getComment, req);
+        return comments[0];
+    }catch(err){
+        return Error(err);
     }
 }

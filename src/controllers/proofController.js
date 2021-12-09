@@ -9,11 +9,12 @@ exports.getProof = async(req, res) => {
         const rows = await proofService.getProof([challenge_uid]);
         const challenge = await challengeService.getChallenge([challenge_uid]);
         console.log(challenge[0].challenge_creator);
-        return res.render('proof', {
+        return res.render('index', {
             session: session,
             challenge_uid:challenge_uid,
             rows:rows,
-            challenge:challenge[0].challenge_creator
+            challenge:challenge[0].challenge_creator,
+            pages: 'proof'
         });
     }catch(err){
         return res.status(500).json(err);
@@ -25,9 +26,10 @@ exports.getInsertProof = async(req, res) => {
     const session = req.session.user_uid;
     const challenge_uid = req.params.challenge_uid;
     try{
-        return res.render('insertProof', {
+        return res.render('index', {
             session: session,
-            challenge_uid: challenge_uid
+            challenge_uid: challenge_uid,
+            pages: 'insertProof'
         })
     }catch(err){
         return res.status(500).json(err);

@@ -72,7 +72,7 @@ exports.postPage = async (req, res) => {
         return res.render('index1', {
             session:session, 
             post_info:post_info,
-            pages : 'post'
+            pages : 'mypagePost'
         })
     }
 
