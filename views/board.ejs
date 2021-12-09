@@ -7,6 +7,39 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="px-4 py-5 my-5 text-center">
+      <button type="button"  onclick="location.href=''">상세</button>
+      <button type="button"  onclick="location.href='/challenge/<%=challenge_uid%>/proof'">인증</button>
+      <button type="button"  onclick="location.href='/challenge/<%=challenge_uid%>/board'">게시판</button>
+        <div class="col-lg-10 mx-auto">
+            <button type="button"  onclick="location.href='/challenge/<%=challenge_uid%>/board/post'">작성</button>
+            <div>
+              <table>
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">일자</th>
+                  <th scope="col">작성자</th>
+                </tr>
+                <%
+                for(var i = 0; i<board_info.length; i++)
+                {
+                %>
+                <tr>
+                  <td><%=i+1%></td>
+                  <td><a href="/challenge/<%=challenge_uid%>/board/<%=board_info[i].post_uid%>"><%=board_info[i].post_title%></a></td>
+                  <td><%=board_info[i].post_create_date%></td>
+                  <td><%=board_info[i].user_uid%></td>
+                </tr>
+                <%
+                }
+                %> 
+              </table>
+               
+            </div>
+          
+        </div>
+        
+    </div>
 </body>
 </html>

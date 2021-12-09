@@ -7,6 +7,54 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <%=detail_info[0].post_title%>
+    </div>
+    <div>
+        <img src="<%=detail_info[0].post_image%>"/>
+    </div>
+    <div>
+        <%=detail_info[0].post_content%>
+    </div>
+    <div>
+        <%=detail_info[0].post_create_date%>
+    </div>
+    <div>
+        <%=detail_info[0].user_uid%>
+    </div>
+
+    <div>
+        <form action="/challenge/<%=challenge_uid%>/board/<%=detail_info[0].post_uid%>/comment" method="post"> 
+            <table>
+                <tr>
+                    <th><input type="text" name="comment_content"></th>
+                    <th><button type="submit" >작성</button></th>
+                </tr>
+            </table>
+        </form>
+       
+        
+        <table>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">내용</th>
+              <th scope="col">날짜</th>
+              <th scope="col">작성자</th>
+            </tr>
+            <%
+            for(var i = 0; i<comments.length; i++)
+            {
+            %>
+            <tr>
+              <td><%=i+1%></td>
+              <td><%=comments[i].comment_content%></td>
+              <td><%=comments[i].comment_create_date%></td>
+              <td><%=comments[i].user_uid%></td>
+            </tr>
+            <%
+            }
+            %> 
+          </table>
+    </div>
 </body>
 </html>

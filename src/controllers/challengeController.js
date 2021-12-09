@@ -40,9 +40,10 @@ exports.getDetail = async(req, res) => {
     try{
         const detail = await challengeService.getChallenge([challenge]);
         console.log(detail[0].challenge_image);
-        return res.render('detailChallenge',{
+        return res.render('index',{
             session:session,
-            detail:detail
+            detail:detail,
+            pages:'detailChallenge'
         })
     }catch(err){
         return res.status(500).json(err);
