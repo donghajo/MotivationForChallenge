@@ -14,12 +14,12 @@
     
 
 </head>
-   
+<% if(session){ %>
 <div class="container my-4">
 
   <hr class="mt-5">
 
-  <p style="font-size: 30px;">Motivation For Challenge</p>
+  <p style="font-size: 30px;"><%=session%>'s Challenge</p>
   
 
   <hr class="mb-5"/>
@@ -28,19 +28,7 @@
   <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
     <!--Controls-->
-    <div class="controls-top">
-      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-    </div>
-    <!--/.Controls-->
-
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-      <li data-target="#multi-item-example" data-slide-to="1"></li>
-      <li data-target="#multi-item-example" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
+   
 
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
@@ -140,7 +128,7 @@
       <!--/.Second slide-->
 
       <!--Third slide-->
-      <div class="carousel-item">
+      <div class="carousel-i     tem">
 
         <div class="row">
           <div class="col-md-4">
@@ -188,18 +176,29 @@
 
     </div>
     <!--/.Slides-->
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
 
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
   </div>
   <!--/.Carousel Wrapper-->
 
 
 </div>  
-
-<hr class="mt-5">
+<% } %>
+<hr class="mt-5 my-5">
 <p style="font-size: 30px;">Challenge Category</p>
 
 
-<hr class="mt-5">
 
           <div class="">
             <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/1'"><img src="https://item.kakaocdn.net/do/6862fba2295ce6299936c3a12ef7a9fcf43ad912ad8dd55b04db6a64cddaf76d" height ="100" width="150"><p>운동</p></button>
@@ -211,8 +210,6 @@
             <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/7'"><img src="https://i.pinimg.com/originals/6f/39/f0/6f39f0bbe37c1faf827bc78b221096c9.gif" height="100" width="150"><p>돈관리</p></button>
             <button type="button" class="btn btn-outline-dark mx-5 my-3" onclick="location.href='/list/8'"><img src="https://i.pinimg.com/originals/66/a8/00/66a800df5417f9739235a98127de4dc9.gif" height="100" width="150"><p>공부</p></button>
         </div>
-        <hr class="mb-5"/>
-
         </div>
       </body>
       </html>
