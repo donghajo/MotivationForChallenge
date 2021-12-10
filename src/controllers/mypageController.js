@@ -7,7 +7,7 @@ exports.myInfoPage = async (req, res) => {
     try {
         let user_info = await mypageService.myInfo(user_uid)
         let session = req.session.user_uid
-        return res.render('index1', {
+        return res.render('index', {
             session:session, 
             user_info:user_info,
             pages : 'myInfo'
@@ -27,7 +27,7 @@ exports.updateMyInfoPage = async (req, res) => {
     try {
         let user_info = await mypageService.myInfo(user_uid)
         let session = req.session.user_uid
-        return res.render('index1', {
+        return res.render('index', {
             session:session, 
             user_info:user_info,
             pages : 'updateUser'
@@ -47,11 +47,13 @@ exports.challengePage = async (req, res) => {
     try {
         let pc_info = await mypageService.pcList(user_uid)
         let cc_info = await mypageService.ccList(user_uid)
+        let post_info = await mypageService.postList(user_uid)
         let session = req.session.user_uid
-        return res.render('index1', {
+        return res.render('index', {
             session:session, 
             pc_info:pc_info,
             cc_info:cc_info,
+            post_info:post_info,
             pages : 'mypageChallenge'
         })
     }
@@ -69,7 +71,7 @@ exports.postPage = async (req, res) => {
     try {
         let post_info = await mypageService.postList(user_uid)
         let session = req.session.user_uid
-        return res.render('index1', {
+        return res.render('index', {
             session:session, 
             post_info:post_info,
             pages : 'mypagePost'

@@ -58,55 +58,113 @@ body {
                         
                     </div>
                     
-                    <div class="row">
-          <div class="col">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" data-toggle="tab" href="#qwe">진행중인 챌린지</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#asd">진행했던 챌린지</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#zxc">게시글</a>
-                </li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="qwe">
-                    <div class="px-4 py-5 my-5 text-center">
-                        <div class="col-lg-10 mx-auto">
-
-                            <table class="table table-hover table-striped" >
-                                <tr class="table-dark">
-                                  <th scope="col">번호</th>
-                                  <th scope="col">챌린지 명</th>
-                                  <th scope="col">진행 여부</th>
-                                </tr>
-                                <%
-                                for(var i = 0; i<pc_info.length; i++)
-                                {
-                                %>
-                                <tr>
-                                  <td><%=i+1%></td>
-                                  <td><a href="/challenge/<%=pc_info[i].challenge_uid%>"><%=pc_info[i].challenge_title%></a></td>
-                                  <td><%=pc_info[i].challenge_state%></td>
-                                </td>
-                                </tr>
-                                <%
-                                }
-                                %>
-                          
-                            </table>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col">
+                           
+                              <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                  <a class="nav-link active" data-toggle="tab" href="#qwe">진행중인 챌린지</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" data-toggle="tab" href="#asd">내가 만든 챌린지</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" data-toggle="tab" href="#zxc">게시글</a>
+                                </li>
+                              </ul>
+                              <div class="tab-content">
+                                <div class="tab-pane fade show active" id="qwe">
+                                    <div class="px-4 py-5 my-5 text-center">
+                                        <div class="col-lg-10 mx-auto">
+                                           
+                                            <table class="table table-hover table-striped" >
+                                                <tr class="table-dark">
+                                                  <th scope="col">번호</th>
+                                                  <th scope="col">챌린지 명</th>
+                                                  <th scope="col">진행 여부</th>
+                                                </tr>
+                                                <%
+                                                for(var i = 0; i<pc_info.length; i++)
+                                                {
+                                                %>
+                                                <tr>
+                                                  <td><%=i+1%></td>
+                                                  <td><a href="/challenge/<%=pc_info[i].challenge_uid%>"><%=pc_info[i].challenge_title%></a></td>
+                                                  <td><%=pc_info[i].challenge_state%></td>
+                                                </td>
+                                                </tr>
+                                                <%
+                                                }
+                                                %>
+                                          
+                                              </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="asd">
+                                    <div class="px-4 py-5 my-5 text-center">
+                                        <div class="col-lg-10 mx-auto">
+                                            
+                                            <table class="table table-hover table-striped" >
+                                                <tr class="table-dark">
+                                                  <th scope="col">번호</th>
+                                                  <th scope="col">챌린지 명</th>
+                                                  <th scope="col">진행 여부</th>
+                                                </tr>
+                                                <%
+                                                for(var i = 0; i<cc_info.length; i++)
+                                                {
+                                                %>
+                                                <tr>
+                                                  <td><%=i+1%></td>
+                                                  <td><a href="/challenge/<%=pc_info[i].challenge_uid%>"><%=cc_info[i].challenge_title%></a></td>
+                                                  <td><%=cc_info[i].challenge_state%></td>
+                                                </td>
+                                                </tr>
+                                                <%
+                                                }
+                                                %>
+                                          
+                                              </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="zxc">
+                                    <div class="px-4 py-5 my-5 text-center">
+                                        <div class="col-lg-10 mx-auto">
+                                            <table class="table">
+                                                <tr>
+                                                  <th scope="col">번호</th>
+                                                  <th scope="col">챌린지명</th>
+                                                  <th scope="col">제목</th>
+                                                </tr>
+                                                <%
+                                                for(var i = 0; i<post_info.length; i++)
+                                                {
+                                                %>
+                                                <tr>
+                                                  <td><%=i+1%></td>
+                                                  <td><a href="/challenge/<%=post_info[i].challenge_uid%>"><%=post_info[i].post_title%></a></td>
+                                                  <td><%=post_info[i].post_create_date%></td>
+                                                </td>
+                                                </tr>
+                                                <%
+                                                }
+                                                %>
+                                          
+                                              </table>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
                         </div>
-                </div>
-            </div>
-        <div class="tab-pane fade" id="asd">
-            <p>Nunc vitae turpis id nibh sodales commodo et non augue. Proin fringilla ex nunc. Integer tincidunt risus ut facilisis tristique.</p>
-        </div>
-          <div class="tab-pane fade" id="zxc">
-            <p>Curabitur dignissim quis nunc vitae laoreet. Etiam ut mattis leo, vel fermentum tellus. Sed sagittis rhoncus venenatis. Quisque commodo consectetur faucibus. Aenean eget ultricies justo.</p>
-        </div>
-    </div>
+                      </div>
+                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+                      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+                   
 
 </body>
 </html>

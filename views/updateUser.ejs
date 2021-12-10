@@ -15,20 +15,20 @@
         <p>회원 정보 수정</p>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <input type="email" class="form-control" id="inputEmail4" name="email" value="<%=user_info[0].email%>">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4">
+          <input type="password" class="form-control" id="inputPassword4" value="<%=user_info[0].password%>">
         </div>
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Name</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <input type="name" class="form-control" id="inputEmail4" value="<%=user_info[0].name%>">
           </div>
         <div class="col-md-6">
           <label for="inputState" class="form-label">interest</label>
-          <select id="inputState" class="form-select">
-            <option selected>선택</option>
+          <select id="inputState" class="form-select" name="interest">
+            <option >선택</option>
             <option>운동</option>
             <option>요리</option>
             <option>음악</option>
