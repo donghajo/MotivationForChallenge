@@ -1,5 +1,4 @@
 const mypageService = require('../services/mypageService');
-const challengeService = require('../services/challengeService');
 
 exports.myInfoPage = async (req, res) => {
 
@@ -73,7 +72,7 @@ exports.postPage = async (req, res) => {
         return res.render('index1', {
             session:session, 
             post_info:post_info,
-            pages : 'mypagePost'
+            pages : 'post'
         })
     }
 
