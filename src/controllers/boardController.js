@@ -1,4 +1,5 @@
 const boardService = require('../services/boardService');
+const challengeService =require('../services/challengeService');
 
 
 exports.getBoard = async(req, res) =>{
@@ -6,10 +7,12 @@ exports.getBoard = async(req, res) =>{
     const { challenge_uid } = req.params
     try{
         let board_info = await boardService.getBoard(challenge_uid)
+        const challenge = await challengeService.getChallenge(challenge_uid);
         return res.render('index',{
             session:session,
             board_info:board_info,
             challenge_uid:challenge_uid,
+            challenge:challenge,
             pages: 'board'
         })
     }catch(err){
