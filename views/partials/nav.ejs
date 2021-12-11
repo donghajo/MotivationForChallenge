@@ -8,30 +8,27 @@
 
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="/" style="font-weight: 900;", style="font-family: SB OTF M">
-    <img src="./images/logo.png" width ="30" heigh="30" class="d-inline-block align-top" alt="">
-    MFC</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+  <a class="navbar-brand " href="/" style="font-weight: 900; color:antiquewhite; padding-left:30px", style="font-family: SB OTF M">
+    <!-- <img src="/logo.png" width ="100" heigh="50" class="d-inline-block align-top" alt=""> -->
+    Motivation For Challenge</a>
 
   
 
-  <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 80%;" >
+  <div class="collapse navbar-collapse" id="navbarNav" style="justify-content:flex-end" >
     
     <% if(session){%>
-      <ul class="navbar-nav ml-auto">
-        <form class="form-inline" action='/signout' method='get'>
-          <button class="btn btn-outline-dark" type='submit'>로그아웃</button>
-      </form>
-      <li  class="nav-item" style="margin-top: 8px;"> <%=session%>님</li>
-      
-
+     
+      <ul class="navbar-nav">
+        <a class="navbar-brand" href="/signout" style="font-weight: 900; color:antiquewhite", style="font-family: SB OTF M">Logout</a>
       </ul>
-      <a href='/mypage/challenge/<%=session%>'>
-        <img src="https://e7.pngegg.com/pngimages/612/745/png-clipart-thin-line-user-icon-icons-logos-emojis-users.png"  alt="Logo" style="width:40px;"> 
-      </a>
+      <ul class="navbar-nav margin:10px">
+        <a  class="navbar-brand" href="/mypage/challenge/<%=session%>" style="font-weight: 900; color:antiquewhite", style="font-family: SB OTF M">MyPage</a>
+      </ul>
       
   <%}else{%>
-      <button type="button" class="btn btn-outline-dark mx-3" onclick="location.href='/signin'">로그인</button>
+    <a class="navbar-brand" href="/signin" style="font-weight: 900; color:antiquewhite", style="font-family: SB OTF M">Login</a>
+    
       <%}%>
 
       

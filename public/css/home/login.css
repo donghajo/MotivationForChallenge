@@ -108,11 +108,7 @@ body {
   background: -moz-linear-gradient(right, #ffffff, #ffffff);
   background: -o-linear-gradient(right, #ffffff, #ffffff);
   background: linear-gradient(to left, #ffffff, #ffffff);
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> subDev
