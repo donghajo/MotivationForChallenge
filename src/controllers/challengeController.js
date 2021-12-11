@@ -21,7 +21,7 @@ exports.getList = async(req, res)=> {
 //챌린지 개설 페이지
 exports.getInsertChallenge = async(req, res) => {
     const challenge_type = req.params.challenge_type;
-    const session = req.session.user_id;
+    const session = req.session.user_uid;
     try{
         return res.render('index', {
            session:session,
