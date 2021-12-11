@@ -33,6 +33,7 @@ app.use(session({
 app.use('/challenge/', express.static('uploads'));
 app.use('/challenge/:challenge_uid/board/:post_uid', express.static('uploads'));
 app.use('/challenge/:challenge_uid/', express.static('uploads'));
+app.use('/', express.static('uploads'));
 
 app.use('/', indexRouter);
 // app.use('/users', usersRouter);
