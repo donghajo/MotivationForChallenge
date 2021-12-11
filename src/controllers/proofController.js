@@ -8,12 +8,11 @@ exports.getProof = async(req, res) => {
     try{
         const rows = await proofService.getProof([challenge_uid]);
         const challenge = await challengeService.getChallenge([challenge_uid]);
-        console.log(challenge[0].challenge_creator);
         return res.render('index', {
             session: session,
             challenge_uid:challenge_uid,
             rows:rows,
-            challenge:challenge[0].challenge_creator,
+            challenge:challenge,
             pages: 'proof'
         });
     }catch(err){
