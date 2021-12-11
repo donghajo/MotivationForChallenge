@@ -1,16 +1,11 @@
 const indexService = require('../services/indexService');
-const challengeService = require('../services/challengeService');
+const mypageService = require('../services/mypageService');
 //get page
 exports.getMain = async(req, res) =>{
     try{
-        const challenge = [];
         const session = req.session.user_uid;
-        const challenger = await indexService.getMyChallenge([session]);
-        for(var i = 0; i < challenger.length; i++){
-            challenge.push(await challengeService.getChallenge([challenger[i].challenge_uid]));
-        }
+        const challenge = await mypageService.pcList([session]);
         
-        console.log(challenge);  
         return res.render('index',{
             session:session,
             pages: 'category',
