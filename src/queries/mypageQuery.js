@@ -1,0 +1,6 @@
+exports.myInfo = 'select * from user where user_uid=?'
+exports.pcList = 'select * from challenge a, challenger b where b.user_uid=? and a.challenge_uid = b.challenge_uid'
+exports.ccList = 'select * from challenge where challenge_creator=?'
+exports.postList = 'select * from post where user_uid=?'
+exports.updateMyInfo = 'update user set email=?, interest=?, where user_uid=?'
+exports.deleteMyInfo = 'delete from user where user_uid=?'

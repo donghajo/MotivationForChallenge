@@ -9,6 +9,8 @@ const session = require('express-session');
 var indexRouter = require('./src/routes/indexRouter');
 var signRouter = require('./src/routes/signRouter');
 var challengeRouter = require('./src/routes/challengeRouter');
+var proofRouter = require('./src/routes/proofRouter');
+var boardRouter = require('./src/routes/boardRouter');
 // var usersRouter = require('./routes/users');
 
 
@@ -28,11 +30,18 @@ app.use(session({
   resave:false,
   saveUninitialized:true,
 }))
+app.use('/challenge/', express.static('uploads'));
+app.use('/challenge/:challenge_uid/board/:post_uid', express.static('uploads'));
+app.use('/challenge/:challenge_uid/', express.static('uploads'));
+app.use('/', express.static('uploads'));
+app.use('/list/:challenge_type', express.static('uploads'));
 
 app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/', challengeRouter);
 app.use('/', signRouter);
+app.use('/challenge', proofRouter);
+app.use('/challenge', boardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

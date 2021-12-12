@@ -1,0 +1,11 @@
+#modules
+node_modules/
+
+# database
+database/
+
+#files
+*.zip
+
+#uploads
+uploads/
