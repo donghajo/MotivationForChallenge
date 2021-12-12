@@ -26,9 +26,9 @@
                 <div class="card-body">
                   <p class="card-text"><%=row.challenge_title%></p>
                   <div class="d-flex justify-content-between align-items-center">
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='/challenge/<%=row.challenge_uid%>'">상세보기</button>
                     <small class="text-muted">시작일: <%=row.challenge_start_date%></small>
                     <small class="text-muted">참여자 수: <%=row.challenger_count%></small>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='/challenge/<%=row.challenge_uid%>'">상세보기</button>
                   </div>
                 </div>
               </div>
